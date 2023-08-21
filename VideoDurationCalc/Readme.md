@@ -25,7 +25,7 @@ powershell -ExecutionPolicy Bypass -File vdc.ps1 <视频时长 HH:mm:ss> <播放
 ```
 powershell -ExecutionPolicy Bypass -File vdc.ps1
 ```
-## 示例
+### 示例
 ```
 > powershell -ExecutionPolicy Bypass -File vdc.ps1 2:30:00 2.5
 
