@@ -1,3 +1,7 @@
+Write-Host "CompactFileLister v3.0.0 by WangHaonie"
+Write-Host "GitHub: https://github.com/WangHaonie/BatchScripts/tree/main/CompactFileLister"
+Write-Host "该工具可以查询磁盘中哪些文件夹被压缩 (Compact) 存储"
+
 $availableDrives = Get-WmiObject Win32_LogicalDisk | Where-Object { $_.DriveType -in 1,2,3,4,5 } | Select-Object -ExpandProperty DeviceID
 
 if ($availableDrives.Count -eq 0) {
