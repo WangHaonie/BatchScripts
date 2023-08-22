@@ -3,6 +3,10 @@ param (
     [double]$playbackSpeed
 )
 
+Write-Host "VideoDurationCalc v2.0.0 by WangHaonie"
+Write-Host "GitHub: https://github.com/WangHaonie/BatchScripts/tree/main/VideoDurationCalc"
+Write-Host "该工具可以计算开了倍速后的视频，需要多久才能播放完"
+
 if ((!$videoTime -or !$playbackSpeed) -or ($videoTime -and !$playbackSpeed)) {
     Write-Host " "
     Write-Host "缺少相关参数，已进入交互模式运行，请正确地指定相关参数" -ForegroundColor Red
@@ -25,5 +29,5 @@ try {
 }
 
 Write-Host " "
-Write-Host "以 $playbackSpeed 倍速播放该时长为 $videoTime 的视频需要 $result。"
+Write-Host "以 $playbackSpeed 倍速播放该时长为 $videoTime 的视频需要 $result。" -ForegroundColor Cyan
 Write-Host " "
