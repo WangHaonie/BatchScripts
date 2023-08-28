@@ -4,7 +4,7 @@ $UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 $resourceCode = Read-Host "请输入报纸/试卷上的资源码"
 Write-Host " "
 $url = "https://www.xyybs.com/index.php?from=fwh&m=search&c=go&a=geturl&q=$resourceCode"
-$output = ..\JsonParser\JsonParser.ps1 -url "$url" content
+$output = .\JsonParser.ps1 -url "$url" content
 
 if ($output -match "^https:\/\/") {
     $webResponse = Invoke-WebRequest -Uri $output -Headers @{ "User-Agent" = $UserAgent }
