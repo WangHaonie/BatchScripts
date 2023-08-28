@@ -4,7 +4,7 @@ param(
 )
 
 if (-not $url) {
-    Write-Host "Usage: JsonParser.ps1 <json URL> [node.subnode]"
+    Write-Host "用法: jsonp <url> <node.subnode>"
     return
 }
 
@@ -14,7 +14,12 @@ try {
     $response = Invoke-RestMethod -Uri $url -Method Get -Headers @{ "User-Agent" = $userAgent }
 }
 catch {
-    Write-Host "Error: Unable to fetch URL or parse JSON."
+    Write-Host "无法读取 $url ，请确保输入了正确的 URL 并且当前网络通畅" -ForegroundColor Red
+    return
+}
+
+if (-not $nodePath) {
+    $response | ConvertTo-Json
     return
 }
 
@@ -41,18 +46,13 @@ function Get-JsonValue {
     return $null
 }
 
-if (-not $nodePath) {
-    $response | Out-String -NoQuotes
-    return
-}
-
 $nodes = $nodePath -split '\.'
 $currentNode = $response
 
 foreach ($node in $nodes) {
     $currentNode = Get-JsonValue -node $currentNode -nodeName $node
     if ($currentNode -eq $null) {
-        Write-Host "Error: Node $node not found."
+        Write-Host "在返回的内容中找不到节点 $node" -ForegroundColor Red
         return
     }
 }
