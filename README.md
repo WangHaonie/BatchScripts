@@ -5,4 +5,12 @@
 2. 我并不提供任何技术支持或问题解答，因为我个人并不打算将其作为一个维护的项目。
 3. 如果您想使用这个脚本，请确保您具备相关的技术知识和经验，也可以自行修改和定制。
 4. 欢迎查看代码和学习，但禁止将其用于商业目的或未经授权的用途。
-
+## 各脚本介绍
+| 脚本名称 | 主要编程语言 | 功能简介 |
+|-------|-------|-------|
+| [AdminChecker](https://github.com/WangHaonie/BatchScripts/tree/main/AdminChecker) | Batch、PowerShell | 检查当前账户是否具有管理员权限 |
+| [CompactFileLister](https://github.com/WangHaonie/BatchScripts/tree/main/CompactFileLister) | PowerShell | 列出磁盘中被压缩存储的文件夹 |
+| [JsonParser](https://github.com/WangHaonie/BatchScripts/tree/main/JsonParser) | PowerShell | 从 URL 解析 Json |
+| [ManualCheckWinUpdate](https://github.com/WangHaonie/BatchScripts/tree/main/ManualCheckWinUpdate) | Batch |  |
+| [SimpleVideoConverter](https://github.com/WangHaonie/BatchScripts/tree/main/SimpleVideoConverter) | Batch | 单元格3 |
+| [VideoDurationCalc](https://github.com/WangHaonie/BatchScripts/tree/main/VideoDurationCalc) | PowerShell | 单元格3 |
