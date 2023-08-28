@@ -14,3 +14,4 @@
 | [ManualCheckWinUpdate](https://github.com/WangHaonie/BatchScripts/tree/main/ManualCheckWinUpdate) | Batch | 手动运行检查 Windows 更新 |
 | [SimpleVideoConverter](https://github.com/WangHaonie/BatchScripts/tree/main/SimpleVideoConverter) | Batch | 快速转换视频格式 |
 | [VideoDurationCalc](https://github.com/WangHaonie/BatchScripts/tree/main/VideoDurationCalc) | PowerShell | 计算倍速后视频播放时间 |
+| [XyybsDownloader](https://github.com/WangHaonie/BatchScripts/tree/main/VideoDurationCalc) | PowerShell | 通过学英语报的资源码下载对应听力文件 |
