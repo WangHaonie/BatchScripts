@@ -11,6 +11,6 @@
 | [AdminChecker](https://github.com/WangHaonie/BatchScripts/tree/main/AdminChecker) | Batch、PowerShell | 检查当前账户是否具有管理员权限 |
 | [CompactFileLister](https://github.com/WangHaonie/BatchScripts/tree/main/CompactFileLister) | PowerShell | 列出磁盘中被压缩存储的文件夹 |
 | [JsonParser](https://github.com/WangHaonie/BatchScripts/tree/main/JsonParser) | PowerShell | 从 URL 解析 Json |
-| [ManualCheckWinUpdate](https://github.com/WangHaonie/BatchScripts/tree/main/ManualCheckWinUpdate) | Batch |  |
-| [SimpleVideoConverter](https://github.com/WangHaonie/BatchScripts/tree/main/SimpleVideoConverter) | Batch | 单元格3 |
-| [VideoDurationCalc](https://github.com/WangHaonie/BatchScripts/tree/main/VideoDurationCalc) | PowerShell | 单元格3 |
+| [ManualCheckWinUpdate](https://github.com/WangHaonie/BatchScripts/tree/main/ManualCheckWinUpdate) | Batch | 手动运行检查 Windows 更新 |
+| [SimpleVideoConverter](https://github.com/WangHaonie/BatchScripts/tree/main/SimpleVideoConverter) | Batch | 快速转换视频格式 |
+| [VideoDurationCalc](https://github.com/WangHaonie/BatchScripts/tree/main/VideoDurationCalc) | PowerShell | 计算倍速后视频播放时间 |
