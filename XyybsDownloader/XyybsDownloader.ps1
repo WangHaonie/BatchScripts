@@ -1,9 +1,21 @@
-Add-Type -AssemblyName System.Windows.Forms
-
-Write-Host "XyybsDownloader v2.0 by WangHaonie"
+Write-Host "XyybsDownloader v2.2.1 by WangHaonie"
 Write-Host "GitHub：https://github.com/WangHaonie/BatchScripts/tree/main/XyybsDownloader"
 Write-Host "该脚本可以根据输入的资源码从学英语报社官网下载听力文件"
 Write-Host " "
+
+$winver = (Get-WmiObject Win32_OperatingSystem).Version
+if ([version]$winver -lt [version]"6.2") {
+    Write-Host "警告：当前系统为 Windows 8/8.1 之前的版本，可能预装了旧版本 PowerShell。" -ForegroundColor Red
+    Write-Host "也就是说该脚本在当前系统上可能不会正常运行。" -ForegroundColor Red
+    Write-Host " "
+}
+
+$psver = $PSVersionTable.PSVersion.Major
+if ($psver -lt 3) {
+    Write-Host "警告：此脚本包含了新版本 PowerShell 才能识别的代码，" -ForegroundColor Red
+    Write-Host "而当前 PowerShell 版本低于 3.0，这意味着此脚本的部分代码将不会被正确执行" -ForegroundColor Red
+    Write-Host " "
+}
 
 if (-not (Test-Path -Path .\jsonParser.ps1 -PathType Leaf)) {
     Write-Host "未在当前目录 $PSScriptRoot\ 找到 jsonParser.ps1，程序无法继续运行。" -ForegroundColor Red
@@ -11,6 +23,7 @@ if (-not (Test-Path -Path .\jsonParser.ps1 -PathType Leaf)) {
     Exit
 }
 
+Add-Type -AssemblyName System.Windows.Forms
 $UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
 $resourceCode = Read-Host "请输入报纸/试卷上的资源码"
 Write-Host " "
@@ -19,7 +32,7 @@ $url = "https://www.xyybs.com/index.php?from=fwh&m=search&c=go&a=geturl&q=$resou
 $output = .\jsonParser.ps1 -url "$url" content
 
 if ($output -match "^https:\/\/") {
-    $webResponse = Invoke-WebRequest -Uri $output -Headers @{ "User-Agent" = $UserAgent }
+    $webResponse = Invoke-WebRequest -UseBasicParsing -Uri $output -Headers @{ "User-Agent" = $UserAgent }
     $webContent = $webResponse.Content
     $urls = [regex]::Matches($webContent, '(?<=\/\/cdn\.xyybs\.com\/uploadfile\/)([^\s"]+\.[^\s"]+)')
 
@@ -49,7 +62,7 @@ if ($output -match "^https:\/\/") {
                     Write-Host " "
                     Write-Host "正在开始下载 $completeUrl" -ForegroundColor Green
                     Write-Host "提示：正在使用原生 PowerShell 引擎下载文件，其速度可能感人，请稍等片刻" -ForegroundColor Green
-                    Invoke-WebRequest -Uri $completeUrl -OutFile $selectedFilePath -Headers @{ "User-Agent" = $UserAgent }
+                    Invoke-WebRequest -UseBasicParsing -Uri $completeUrl -OutFile $selectedFilePath -Headers @{ "User-Agent" = $UserAgent }
                     Write-Host " "
                     Write-Host "下载成功，文件已保存到: $selectedFilePath" -ForegroundColor Cyan
                 } else {
@@ -57,11 +70,11 @@ if ($output -match "^https:\/\/") {
                     Write-Host "已取消下载：用户已取消保存"
                 }
             } catch {
-                Write-Host "下载失败：$completeUrl"
+                Write-Host "无法下载 $completeUrl，可能由于本地网络或目标服务器出现了异常，这通常并不是由该脚本导致的问题"
             }
         }
     } else {
-        Write-Host "未找到下载地址：请检查资源码是否正确" -ForegroundColor Red
+        Write-Host "无法获取下载地址，请检查资源码是否正确" -ForegroundColor Red
     }
 } else {
     Write-Host "发生错误：请检查资源码是否正确" -ForegroundColor Red
