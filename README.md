@@ -14,6 +14,6 @@
 | [ManualCheckWinUpdate](https://github.com/WangHaonie/BatchScripts/tree/main/ManualCheckWinUpdate) | Batch | 手动运行检查 Windows 更新 |
 | [SimpleVideoConverter](https://github.com/WangHaonie/BatchScripts/tree/main/SimpleVideoConverter) | Batch | 快速转换视频格式 |
 | [VideoDurationCalc](https://github.com/WangHaonie/BatchScripts/tree/main/VideoDurationCalc) | PowerShell | 计算倍速后视频播放时间 |
-| [XyybsDownloader](https://github.com/WangHaonie/BatchScripts/tree/main/XyybsDownloader) | PowerShell | 通过学英语报的资源码下载对应听力文件 |
+| [XyybsDownloader](https://github.com/WangHaonie/BatchScripts/tree/main/XyybsDownloader) | PowerShell | 从学英语报社官网下载听力文件 |
 ## 关于下载的部分脚本无法运行的问题
 GitHub Desktop 貌似会在上传时损坏部分脚本使其丢失几个字节导致即使内容没有改变也不能正常运行。你可以下载仓库里的 [BatchScripts-AllinOne.7z](https://raw.githubusercontent.com/WangHaonie/BatchScripts/main/BatchScripts-AllinOne.7z) 来使用原版脚本避免出现运行错误。
