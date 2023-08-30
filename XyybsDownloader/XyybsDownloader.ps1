@@ -93,7 +93,7 @@ if ($output -match "^https:\/\/") {
                 }
             } catch {
                 Write-Host " "
-                Write-Host "无法下载 $completeUrl，可能由于本地网络或目标服务器出现了异常，这通常并不是由该脚本导致的问题"
+                Write-Host "无法下载 $completeUrl，可能由于本地网络或目标服务器出现了异常，这通常并不是由该脚本导致的问题" -ForegroundColor Red
             }
         }
     } else {
