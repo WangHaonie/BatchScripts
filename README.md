@@ -19,7 +19,7 @@
 | [WinNtpUpdater](https://github.com/WangHaonie/BatchScripts/tree/main/WinNtpUpdater) | Batch | Windows 7 | 解决系统时间无法同步或不会同步的情况 |
 | [XyybsDownloader](https://github.com/WangHaonie/BatchScripts/tree/main/XyybsDownloader) | PowerShell | Windows 7* | 从学英语报社官网下载听力文件 |
 
-标有 * 的说明要安装 [WMF 3.0](https://www.microsoft.com/en-US/download/details.aspx?id=34595) 更新，因为此更新包含了 PowerShell 3.0，某些 PowerShell 脚本 (比如调用 .NET 程序集、Invoke-Webrequest 下载文件等) 需要 3.0 及以上版本才能正常运行。
+标有 * 的说明要安装 [WMF 3.0](https://www.microsoft.com/en-US/download/details.aspx?id=34595) 更新，因为此更新包含了 PowerShell 3.0，某些 PowerShell 脚本 (比如调用 .NET 程序集、Invoke-WebRequest 下载文件等) 需要 3.0 及以上版本才能正常运行。
 ## 关于下载的部分脚本无法运行的问题
 1. GitHub Desktop 貌似会在上传时损坏部分脚本使其丢失几个字节导致即使内容没有改变也不能正常运行。你可以下载仓库里的 [BatchScripts-AllinOne.7z](https://raw.githubusercontent.com/WangHaonie/BatchScripts/main/BatchScripts-AllinOne.7z) 来使用原版脚本避免出现运行错误。
 2. 如果你确定脚本没有损坏但依旧无法正常运行，尝试以管理员身份运行，若仍然不行，将 PowerShell 更新到 3.0 及以上，实在不行就直接用 Windows 10 及以上 (PowerShell 5) 的操作系统运行脚本。
