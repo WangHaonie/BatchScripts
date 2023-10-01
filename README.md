@@ -9,7 +9,7 @@
 | 脚本名称 | 主要编程语言 | 最低系统版本要求 | 功能简介 |
 |-------|-------|-------|-------|
 | [AdminChecker](https://github.com/WangHaonie/BatchScripts/tree/main/AdminChecker) | Batch、PowerShell | Windows 7 | 检查当前账户是否具有管理员权限 |
-| [BackgroundKiller](https://github.com/WangHaonie/BatchScripts/tree/main/BackgroundKiller)| PowerShell | Win|
+| [BackgroundKiller](https://github.com/WangHaonie/BatchScripts/tree/main/BackgroundKiller)| PowerShell | Windows 10 | 杀死那些点了退出还在后台运行的程序
 | [CompactFileLister](https://github.com/WangHaonie/BatchScripts/tree/main/CompactFileLister) | PowerShell | Windows 10 1803 | 列出磁盘中被压缩存储的文件夹 |
 | [JsonParser](https://github.com/WangHaonie/BatchScripts/tree/main/JsonParser) | PowerShell | Windows 7 (需要安装 [WMF 3.0](https://www.microsoft.com/en-US/download/details.aspx?id=34595) 更新) | 从 URL 解析 Json |
 | [ManualCheckWinUpdate](https://github.com/WangHaonie/BatchScripts/tree/main/ManualCheckWinUpdate) | Batch | Windows 10 1511 | 手动运行检查 Windows 更新 |
