@@ -4,4 +4,4 @@
 1. 系统默认 NTP 服务器将设置为 ```ntp1.aliyun.com```
 2. 将 Windows Time 服务设置为自动启动
 ## 使用方法
-1. 下载 ```WinNtpUpdater.bat``` 运行即可
+1. 下载 ```WinNtpUpdater.bat``` 并以管理员身份运行。
